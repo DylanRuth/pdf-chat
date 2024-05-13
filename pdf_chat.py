@@ -27,7 +27,7 @@ if not os.path.exists("./tempfolder"):
     os.makedirs("./tempfolder")
 
 tab1, tab2, tab3 = st.tabs(
-    ["💬 Chat with PDF", "📚 Relevant Document Chunks", "💾 Current Database in Memory"]
+    ["Chat with PDF", "Relevant Document Chunks", "Current Database in Memory"]
 )
 
 tab1.markdown(
@@ -219,12 +219,12 @@ if prompt := st.chat_input("What is up?"):
         with st.chat_message("assistant"):
             message_placeholder = st.empty()
             message_placeholder.write(
-                "Please go ahead and upload the PDF in the sidebar, it would be great to have it there and make sure API key Entered"
+                "Please upload the PDF in the sidebar, and ensure sure your API key is entered"
             )
         st.session_state.messages.append(
             {
                 "role": "assistant",
-                "content": "Please go ahead and upload the PDF in the sidebar, it would be great to have it there and make sure API key Entered",
+                "content": "Please upload the PDF in the sidebar, and ensure sure your API key is entered",
             }
         )
 
